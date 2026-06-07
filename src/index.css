@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
 @import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
 @theme {
   --color-primary: #030412;
   --color-midnight: #06091f;
@@ -51,7 +56,6 @@ body {
   background: #030412;
   font-family: "Funnel Display", sans-serif;
   color: white;
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -64,7 +68,8 @@ body {
 }
 
 .section-spacing {
-  @apply min-h-screen mt-20 md:mt-30;
+  @apply min-h-[60vh] mt-10 md:mt-16;
+  scroll-margin-top: 5.5rem;
 }
 
 .text-heading {
