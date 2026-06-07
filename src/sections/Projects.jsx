@@ -95,12 +95,18 @@ function Projects() {
         {sampleProjects.map((p) => (
           <motion.article
             key={p.id}
-            className="group relative rounded-2xl overflow-hidden h-72 cursor-pointer bg-black/20 border border-white/10"
+            className="group relative rounded-2xl overflow-hidden h-72 cursor-pointer bg-black/20 border border-white/10 isolate"
             whileHover={{ scale: 1.02, rotate: -0.2 }}
             transition={{ type: 'spring', stiffness: 180, damping: 16 }}
           >
-            <img src={p.image} alt={p.title} className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+            <div className="absolute inset-0 overflow-hidden rounded-2xl">
+              <img
+                src={p.image}
+                alt={p.title}
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 transform-gpu will-change-transform"
+              />
+            </div>
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
             <div className="absolute top-4 left-4 rounded-full bg-black/40 backdrop-blur-sm px-3 py-1 text-xs text-neutral-200 border border-white/10">
               Project {String(p.id).padStart(2, '0')}
             </div>
