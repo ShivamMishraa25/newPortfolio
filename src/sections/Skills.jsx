@@ -2,9 +2,16 @@ import React from 'react'
 
 const skills = [
   { name: 'JavaScript', level: 90 },
-  { name: 'React', level: 85 },
-  { name: 'Three.js', level: 60 },
-  { name: 'Tailwind CSS', level: 80 },
+  { name: 'Node.js', level: 80 },,
+  { name: 'Expres.js', level: 80},
+  { name: 'React', level: 80 },
+  { name: 'Redux', level: 80 },
+  { name: 'PHP', level: 75 },
+  { name: 'SQL', level: 80 },
+  { name: 'MongoDB', level: 80 },
+  { name: 'Git', level: 80 },
+  { name: 'Next.js', level: "learning" },
+  { name: 'Angular', level: "learning" }
 ]
 
 function Skills() {

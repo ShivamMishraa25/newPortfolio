@@ -18,22 +18,46 @@ function Contact() {
         <div className="grid gap-4 md:grid-cols-2">
           <div>
             <label className="field-label">Name</label>
-            <input className="field-input field-input-focus" placeholder="Your name" />
+            <input
+              type="text"
+              name="name"
+              className="field-input field-input-focus"
+              placeholder="Your name"
+              required
+            />
           </div>
           <div>
             <label className="field-label">Email</label>
-            <input className="field-input field-input-focus" placeholder="you@example.com" />
+            <input
+              type="email"
+              name="email"
+              className="field-input field-input-focus"
+              placeholder="you@example.com"
+              required
+            />
           </div>
         </div>
 
         <div>
           <label className="field-label">Subject</label>
-          <input className="field-input field-input-focus" placeholder="Project inquiry, collaboration, etc." />
+          <input
+            type="text"
+            name="subject"
+            className="field-input field-input-focus"
+            placeholder="Project inquiry, collaboration, etc."
+            required
+          />
         </div>
 
         <div>
           <label className="field-label">Message</label>
-          <textarea className="field-input field-input-focus min-h-36" rows={6} placeholder="Tell me about your project..." />
+          <textarea
+            name="message"
+            className="field-input field-input-focus min-h-36"
+            rows={6}
+            placeholder="Tell me about your project..."
+            required
+          />
         </div>
 
         <div className="flex flex-col sm:flex-row sm:items-center gap-4">
